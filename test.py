@@ -7,3 +7,5 @@ vxr.config_mode()
 print(vxr.find_prompt())
 show=vxr.send_command_timing("do sh ip in br")
 print(show)
+
+print("hello")
