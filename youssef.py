@@ -27,7 +27,7 @@ print(output)
 sh = input("to run netmiko enter 1 \n to run paramiko enter 2 ")
 if int(sh)==1:
     from netmiko import ConnectHandler
-    vxr=ConnectHandler(host="192.168.1.15",username="youssef",password="welcome",secret="1234",device_type="cisco_ios")
+    vxr=ConnectHandler(host="192.168.1.16",username="youssef",password="welcome",secret="1234",device_type="cisco_ios")
     print(vxr.find_prompt())
     vxr.enable()
     print(vxr.find_prompt())
@@ -36,7 +36,7 @@ if int(sh)==1:
     show=vxr.send_command_timing(output)
     print(show)
 else:
-    ssh.connect(hostname='192.168.1.15',port=22,username='youssef',password='welcome')
+    ssh.connect(hostname='192.168.1.16',port=22,username='youssef',password='welcome')
     cli=ssh.invoke_shell()
     cli.send("en \n")
     cli.send("1234" + "\n")
